@@ -2,7 +2,7 @@ const express = require('express');
 const path = require("path");
 const app = express();
 
-//おまじない(リクエストのBODYから取得する)
+//おまじない(リクエストのパラメーターがBODYに入るのでBODYから取得するコマンドが必要)
 app.use(express.urlencoded({extended:false}));
 //htmlのフォルダを指定する
 app.use(express.static(path.join(__dirname,"public")));
